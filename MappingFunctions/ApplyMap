@@ -1,0 +1,28 @@
+ApplyMap () : We use this function to map or mirror the output of an expression, that evaluates during script execution, in a previously loaded table.
+
+The syntax of Qlik Sense ApplyMap() function.
+
+Example 
+
+map1:
+mapping LOAD *
+Inline [
+CountryCode, Country
+Swd, Sweden
+Dmk, Denmark
+Nor, Norway
+] ;
+LOAD *,
+ApplyMap( 'map1', CountryCode ) As Country
+Inline [
+CountryCode, Salesperson
+Swd, John
+Swd, Mary
+Swd, Parker
+Dmk, Josh
+Dmk, Olivia
+Nor, Emma
+Nor, Fred
+] ;
+// We don't need the CountryCode anymore
+Drop Field 'CountryCode';
