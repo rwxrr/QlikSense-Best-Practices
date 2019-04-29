@@ -1,0 +1,3 @@
+sum({<OrderDate= {">=$(=min(StartDate))<=$(=max(EndDate))"}> } Netamountpaid)
+
+// calculate between two date range in this set condition , if you want use the script must change min(startdate) and max(enddate) 
