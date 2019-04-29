@@ -1,0 +1,4 @@
+
+count({<[example]={'XXX'},Id={'9','10','2','6','7','16'},
+Tarih={">=$(=date(today()-6,'YYYY-MM-DD'))<=$(=date(today()-1,'YYYY-MM-DD'))"}>} distinct Y)/5
+
